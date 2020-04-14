@@ -20,9 +20,11 @@ void  _b_int_ (void * _vector_, int _i,int _k){
   }
 }
 
-// void  _b_float_ (void * _vector_, int _i,int _k){
- // TODO:  QUE COSA PONGO AQUI?
-// }
+void  _b_float_ (void * _vector_, int _i,int _k){
+  if (((float*)_vector_)[_i] > ((float*)_vector_)[_i + 1]){
+    swap(((float*)_vector_)[_i], ((float*)_vector_)[_i + 1]);
+  }
+}
 
 // void  _b_double_ (void * _vector_, int _i,int _k){
  // TODO:  QUE COSA PONGO AQUI?
@@ -39,16 +41,16 @@ int main(){
 	double _array_3 [5] = {3.0,8.0,2.0,4.0,15.0};
 	char _array_4 [6] = {'k','a','r','l','o','s'};
 
-	_bubblesort_(_array_1,_b_int_,5);
+	//_bubblesort_(_array_1,_b_int_,5);
 	// PRINT
-	//_bubblesort_(_array_2,_b_float_,5);
+	_bubblesort_(_array_2,_b_float_,5);
 	// PRINT
 	//_bubblesort_(_array_3,_b_double_,5);
 	// PRINT
 	//_bubblesort_(_array_4,_b_char_,6);
 	// PRINT
 
-  for(const auto i : _array_1)
+  for(const auto i : _array_2)
     cout << i << " ";
   cout << endl;
 
